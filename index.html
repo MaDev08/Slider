@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Corrigido para 'IE=edge' -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="slider">
+            <div class="slides" style="--img: url('https://files.oaiusercontent.com/file-KV6CzTMRKb1yin2nPxT7Nb?se=2025-03-03T14%3A04%3A30Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Da03c9d67-9327-40ba-92a2-097027065d3e.webp&sig=k807uvc7Hd%2BNVQf5Z76NRLh7WZZYbs4KiiV2hEfYs7E%3D');"> <!-- Corrigido para 'img/1.jpg' -->
+                <div class="content">
+                    <h2>Slide 1</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi, dolorem accusamus? Est sit esse laborum maiores voluptates labore illum, excepturi numquam ratione fugit, nesciunt odio. At inventore distinctio veritatis aperiam.</p>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('https://files.oaiusercontent.com/file-5WwphRsa1VSqUAsbUSEsq6?se=2025-03-03T14%3A04%3A48Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D681bc658-b80b-4503-85d3-4ce61f8f43ea.webp&sig=SumqNRnn4n68Xu3yH61lfnyB%2BdxColSLGpCSuelsF2Y%3D');"> <!-- Corrigido para 'img/2.jpg' -->
+                <div class="content">
+                    <h2>Slide 2</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi, dolorem accusamus? Est sit esse laborum maiores voluptates labore illum, excepturi numquam ratione fugit, nesciunt odio. At inventore distinctio veritatis aperiam.</p>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('https://cdn.leonardo.ai/users/77716639-1536-4cc3-aadc-54423f2d532f/generations/4c03dc81-0617-45d1-a019-6fb84deb81f8/segments/3:4:1/Flux_Dev_Create_three_distinct_and_vibrant_cyberpunk_cityscape_2.jpeg');"> <!-- Corrigido para 'img/3.jpg' -->
+                <div class="content">
+                    <h2>Slide 3</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi, dolorem accusamus? Est sit esse laborum maiores voluptates labore illum, excepturi numquam ratione fugit, nesciunt odio. At inventore distinctio veritatis aperiam.</p>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('https://cdn.leonardo.ai/users/77716639-1536-4cc3-aadc-54423f2d532f/generations/4a7ae581-cb29-44d5-8880-3925831c83f0/segments/2:4:1/Flux_Dev_Create_three_distinct_cyberpunk_scenes_each_showcasin_1.jpeg');"> <!-- Corrigido para 'img/4.jpg' -->
+                <div class="content">
+                    <h2>Slide 4</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi, dolorem accusamus? Est sit esse laborum maiores voluptates labore illum, excepturi numquam ratione fugit, nesciunt odio. At inventore distinctio veritatis aperiam.</p>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('https://cdn.leonardo.ai/users/77716639-1536-4cc3-aadc-54423f2d532f/generations/4a7ae581-cb29-44d5-8880-3925831c83f0/segments/4:4:1/Flux_Dev_Create_three_distinct_cyberpunk_scenes_each_showcasin_3.jpeg');"> <!-- Corrigido para 'img/5.jpg' -->
+                <div class="content">
+                    <h2>Slide 5</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi, dolorem accusamus? Est sit esse laborum maiores voluptates labore illum, excepturi numquam ratione fugit, nesciunt odio. At inventore distinctio veritatis aperiam.</p>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('https://cdn.leonardo.ai/users/77716639-1536-4cc3-aadc-54423f2d532f/generations/4a7ae581-cb29-44d5-8880-3925831c83f0/segments/1:4:1/Flux_Dev_Create_three_distinct_cyberpunk_scenes_each_showcasin_0.jpeg');"> <!-- Corrigido para 'img/6.jpg' -->
+                <div class="content">
+                    <h2>Slide 6</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse repellendus, vero error maiores, tenetur repudiandae corrupti hic dignissimos pariatur nostrum modi soluta temporibus quia, ea enim nemo saepe fugiat velit.</p>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <span class="prev">←</span> <!-- Símbolo da seta para a esquerda -->
+            <span class="next">→</span> <!-- Símbolo da seta para a direita -->
+        </div>
+    </div>
+    
+    <script>
+        let next = document.querySelector('.next');
+        let prev = document.querySelector('.prev');
+        let slider = document.querySelector('.slider');
+        
+        next.addEventListener('click', function(){
+            let slides = document.querySelectorAll('.slides');
+            slider.appendChild(slides[0]); // Move o primeiro slide para o final
+        });
+        
+        prev.addEventListener('click', function(){
+            let slides = document.querySelectorAll('.slides'); // Corrigido para 'querySelectorAll'
+            slider.prepend(slides[slides.length - 1]); // Move o último slide para o início
+        });
+    </script>
+</body>
+</html>
